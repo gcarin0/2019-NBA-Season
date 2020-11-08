@@ -1,6 +1,6 @@
 #Giancarlo Carino
 #Basketball advanced stats
-#2020 Season
+#2019 Season
 
 #load libraries
 library(tidyverse)
