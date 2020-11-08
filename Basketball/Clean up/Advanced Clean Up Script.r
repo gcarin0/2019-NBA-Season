@@ -4,25 +4,24 @@
 
 #load libraries
 library(tidyverse)
-library(stringr)
 
 #Load data
-advbk20stats <- read_csv("advbk20stats.csv")
+advbk19stats <- read_csv("advbk19stats.csv")
 
 #Tidy the data
 
 #Delete unnecessary columns
-advbk20stats$Rk <- NULL
+advbk19stats$Rk <- NULL
 #advbk18stats$WS <- NULL
 #advbk18stats$`WS/48` <- NULL
 
 #Remove after slash
-advbk20stats$Player <- sub("\\\\.*", "", advbk20stats$Player)
+advbk19stats$Player <- sub("\\\\.*", "", advbk19stats$Player)
 
 #Set Pos as factor variable
-advbk20stats$Pos <- as.factor(advbk20stats$Pos)
+advbk19stats$Pos <- as.factor(advbk19stats$Pos)
 
-glimpse(advbk20stats)
+glimpse(advbk19stats)
 
 #Export as CSV after clean up
-write_csv(advbk20stats, "Cleaned Dataset/ADVbbstats20.csv")
+write_csv(advbk19stats, "Cleaned Dataset/ADVbbstats19.csv")
